@@ -1,0 +1,277 @@
+/* ==============================
+        Fonts
+=============================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  font-weight: 400;
+  background-color: #f3f1ff;
+}
+
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.row {
+  width: 870px;
+  margin: auto;
+}
+/* =============================================
+       navbar
+================================================== */
+
+nav {
+  background-color: #562eff;
+  padding: 10px 0;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+  height: 50px;
+  margin-right: 10px;
+}
+.logo h4 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}
+.nav-menu ul {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-menu li a {
+  font-size: 16px;
+  color: #ffffff;
+}
+.nav-menu li img {
+  width: 45px;
+  height: 45px;
+}
+
+/* ========================================
+     Players 
+============================================== */
+.player-blog .row {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25);
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 33px 33px 42px 30px;
+}
+.top-title {
+  color: #562eff;
+  font-size: 24px;
+  font-weight: 500px;
+  line-break: 36px;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 40px 0 30px;
+  grid-row-gap: 30px;
+}
+.player {
+  display: flex;
+  align-items: center;
+  width: 220px;
+}
+
+.player img {
+  width: 56px;
+  height: 56px;
+  margin-right: 16px;
+}
+.player h3 {
+  font-size: 18px;
+}
+.player-blog hr {
+  height: 1px;
+  border-width: 0;
+  background-color: #d1d1d1;
+}
+
+/* ================================
+   blog
+================================== */
+.top-blogs h2 {
+  padding: 30px 0;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 26px;
+  grid-column-gap: 24px;
+}
+.blog {
+  display: flex;
+  align-items: center;
+}
+.thumbnail {
+  margin-right: 16px;
+}
+.thumbnail img {
+  width: 100%;
+  width: 177px;
+  height: 117px;
+}
+.blog-info h3 {
+  font-size: 20px;
+  line-height: 34px;
+}
+.author {
+  color: #9f9f9f;
+  font-size: 16px;
+  line-height: 24px;
+}
+.author a {
+  color: #562eff;
+}
+
+/* ======================================
+    Course
+==================================== */
+
+.course-section .row {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 22px 30px 22px;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  margin-top: 15px;
+}
+.course {
+  background-color: #fff;
+  box-shadow: 1px 5px 13px 0 rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  border-radius: 10px;
+}
+.banner {
+  width: 100%;
+}
+.course-title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.course-author {
+  color: #ed6b4f;
+  font-size: 15px;
+}
+.course-author:hover {
+  text-decoration: underline;
+}
+
+.course-info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rating i {
+  color: #ffc014;
+  font-size: 14px;
+}
+.rating i:nth-child(5) {
+  color: #aeaeae;
+}
+.rating span {
+  color: #aeaeae;
+  margin-left: 5px;
+}
+.time {
+  background-color: #ffe4e8;
+  padding: 3px 6px;
+  border-radius: 20px;
+}
+.time i {
+  color: #ff4a60;
+  font-size: 16px;
+}
+.time span {
+  color: #ff4a60;
+  font-weight: 500;
+}
+
+/* ==================================================
+Responsive
+============================================================ */
+
+/* Tab */
+@media screen and (max-width:992px) {
+  .row {
+    width: 90%;
+    margin: auto;
+  }
+ 
+  .players,.courses{
+    grid-template-columns: auto auto;
+    grid-row-gap: 26px;
+    grid-column-gap: 24px;
+  
+  }
+
+
+  .blog{
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  .thumbnail{
+    margin-right: 0px;
+   
+  }
+  .thumbnail img{
+    height: 200px;
+    width: 100%;
+  }
+  .blog-info{
+    margin-top: 10px;
+  }
+
+
+  
+}
+
+/* mobile */
+@media screen and (max-width: 667px) {
+  .row {
+    width: calc(100% - 32px);
+    margin: auto;
+  }
+
+  .nav-container{
+    display: none;
+  }
+  .players, .blogs, .courses {
+    grid-template-columns: auto;
+  }
+
+
+}
