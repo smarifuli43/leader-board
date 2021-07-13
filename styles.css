@@ -50,17 +50,18 @@ nav {
   font-size: 24px;
   font-weight: 500;
 }
-.nav-menu ul {
+
+.nav-links {
   width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav-menu li a {
+.nav-links li a {
   font-size: 16px;
   color: #ffffff;
 }
-.nav-menu li img {
+.nav-links li img {
   width: 45px;
   height: 45px;
 }
@@ -221,57 +222,92 @@ Responsive
 ============================================================ */
 
 /* Tab */
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
   .row {
     width: 90%;
     margin: auto;
   }
- 
-  .players,.courses{
+
+  .players,
+  .courses {
     grid-template-columns: auto auto;
     grid-row-gap: 26px;
     grid-column-gap: 24px;
-  
   }
 
-
-  .blog{
+  .blog {
     border: 1px solid #e6e6e6;
     border-radius: 10px;
     padding: 10px;
     flex-direction: column;
     align-items: flex-start;
-    
   }
-  .thumbnail{
+  .thumbnail {
     margin-right: 0px;
-   
   }
-  .thumbnail img{
+  .thumbnail img {
     height: 200px;
     width: 100%;
   }
-  .blog-info{
+  .blog-info {
     margin-top: 10px;
   }
-
-
-  
 }
 
 /* mobile */
 @media screen and (max-width: 667px) {
+  .line {
+    background-color: #fff;
+    width: 10px;
+    height: 2px;
+  }
+
+  .ham {
+    cursor: pointer;
+  }
+  .ham div {
+    background-color: #fff;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .ham:hover div {
+    background-color: #909090;
+  }
+
+  .nav-links {
+    background-color: #562eff;
+    width: 100vw;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s ease;
+  }
+
+  .active {
+    display: flex;
+    height: 50vh;
+    overflow: auto;
+    padding-left: 40px;
+    padding-top: 60px;
+  }
+
+  .profile-picture {
+    display: none;
+  }
+
   .row {
     width: calc(100% - 32px);
     margin: auto;
   }
-
-  .nav-container{
-    display: none;
-  }
-  .players, .blogs, .courses {
+  .players,
+  .blogs,
+  .courses {
     grid-template-columns: auto;
   }
-
-
 }
